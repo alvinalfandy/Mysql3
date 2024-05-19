@@ -1,9 +1,13 @@
 # Tugas Praktikum { Pertemuan ke 9 } <img src=https://logos-download.com/wp-content/uploads/2016/05/MySQL_logo_logotype.png width="130px" >
 
 
-|**Nama**|**NIM**|**Kelas**|**Matkul**|
-|----|---|-----|------|
-|Muhammad Nurul Firdaus|312310495|TI.23.A.5|Basis Data|
+## Profil
+| Variable | Isi |
+| -------- | --- |
+| **Nama** | ALVIN ALFANDY |
+| **NIM** | 312310473 |
+| **Kelas** | TI.23.A5 |
+| **Mata Kuliah** | Basis data |
 
 # Soal Latihan Praktikum
 
@@ -11,24 +15,24 @@
 dengan menggunakan kode berikut :
 ```
 INSERT INTO dosen (kd_ds, nama) VALUES
-('DS001', 'Arif'),
-('DS002', 'Bagus'),
-('DS003', 'Iqbal'),
-('DS004', 'Radit'),
-('DS005', 'Uyun');
+('DS001', 'Alvin'),
+('DS002', 'Ali'),
+('DS003', 'Rasford'),
+('DS004', 'Faiz'),
+('DS005', 'Antony');
 ```
-![alt text](Screenshot/1.1.png)
+![alt text](gambar/image2.png)
 
 ***Output :***
 
-![alt text](Screenshot/1.2.png)
+![alt text](gambar/image.png)
 
 2. Hapus satu record data pada tabel dosen yang telah dirujuk pada tabel mahasiswa. 
 ```
 DELETE FROM dosen WHERE kd_ds = 'DS005';
 ```
 ***Output :***
-![alt text](Screenshot/2.png)
+![alt text](gambar/image3.png)
 
 3. Ubah mode menjadi **ON UPDATE CASCADE ON DELETE RESTRICT** 
 
@@ -45,32 +49,32 @@ ON DELETE RESTRICT;
 ```
 ***Output :***
 
-![alt text](Screenshot/3.png)
+![alt text](gambar/3.png)
 
 4. Lakukan perubahan data pada tabel dosen (kd_ds)
 
 Berikut adalah contoh perintah untuk melakukan perubahan data pada tabel "dosen" dengan kolom "kd_ds":
 ```
-UPDATE dosen SET kd_ds = 'DS005' WHERE nama = 'Radit';
+UPDATE dosen SET kd_ds = 'DS005' WHERE nama = 'Faiz';
 ```
-Perintah di atas akan mengubah nilai kolom `"kd_ds" "Radit" menjadi "DS005" pada tabel "dosen"`. Anda dapat menyesuaikan nilai yang ingin Anda ubah dan kondisi WHERE sesuai dengan kebutuhan Anda.
+Perintah di atas akan mengubah nilai kolom `"kd_ds" "Faiz" menjadi "DS005" pada tabel "dosen"`. Anda dapat menyesuaikan nilai yang ingin Anda ubah dan kondisi WHERE sesuai dengan kebutuhan Anda.
 
 Pastikan untuk menjalankan perintah dengan hati-hati dan memastikan bahwa perubahan data yang Anda lakukan sesuai dengan kebutuhan dan kebijakan yang berlaku dalam basis data Anda.
 
 ***Output :***
 
-![alt text](Screenshot/4.png)
+![alt text](gambar/image4.png)
 
 5. Lakukan penghapusan data pada tabel dosen
 
 Untuk menghapus data dari tabel "dosen" dengan kondisi "kd_ds = 'DS006'", Anda dapat menggunakan perintah DELETE dengan sintaks yang benar. Berikut adalah contoh perintah yang dapat Anda gunakan:
 ```
-DELETE FROM Dosen WHERE kd_ds = 'DS006';
+DELETE FROM Dosen WHERE kd_ds = 'DS005';
 ```
 
 ***Output :***
 
-![alt text](Screenshot/5.png)
+![alt text](gambar/gambar5.png)
 
 6. Ubah mode menjadi **ON UPDATE CASCADE ON DELETE SET NULL**
 ```
@@ -86,7 +90,7 @@ ON DELETE SET NULL;
 ```
 ***Output :***
 
-![alt text](Screenshot/6.png)
+![alt text](gambar/6.png)
 
 Dengan perubahan di atas, ketika Anda menghapus record dari tabel "dosen" yang memiliki referensi di tabel "mahasiswa", nilai kolom "kd_ds" dalam tabel "mahasiswa" yang mengacu pada record yang dihapus akan diatur menjadi NULL.
 
@@ -98,7 +102,7 @@ DELETE FROM dosen WHERE kd_ds = 'DS003';
 ```
 ***0utput :***
 
-![alt text](Screenshot/7.png)
+![alt text](gambar/gambar6.png)
 
 Perintah ini akan menghapus record dengan nilai "DS003" dari tabel "dosen", dan karena menggunakan opsi ON DELETE SET NULL, nilai kolom "kd_ds" dalam tabel "mahasiswa" yang mengacu pada record yang dihapus akan diatur menjadi NULL.
 
